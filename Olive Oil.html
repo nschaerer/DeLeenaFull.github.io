@@ -5,45 +5,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/lightbox.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+        </script>
     <title>Deleena | Olive Oil</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="./index.html">Home</a>
-                </li>
-                <li>
-                    <a href="./Argan Oil.html">Argan oil</a>
-                </li>
-                <li>
-                    <a href="./Olive Oil.html">Olive oil</a>
-                </li>
-                <li>
-                    <a href="./Our Farm.html">Our farm</a>
-                </li>
-                <li>
-                    <a href="./Shop.html">Shop</a>
-                </li>
-                <li>
-                    <a href="./Contact Us.html">Contact us</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Olive Oil</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde enim reprehenderit explicabo culpa minus fuga
-            doloribus aut omnis, inventore, dolorem id magnam aliquam ipsum soluta, animi minima? Provident, accusantium
-            quae!</p>
-    </main>
-    <aside>Extra stuff on olive oil</aside>
-    <footer>&copy; 2020 Deleena.inc</footer>
+    <div class="wrapper">
+        <header>
 
+            <div class="sign-links">
+                <a id="sign-in" href="./sign in.html">SIGN IN</a>
+                <a id="sign-up" href="#">SIGN UP</a>
+            </div>
+
+            <button class="nav-trigger">
+                <img src="./images/menuPurple.svg" alt="menu button">
+            </button>
+
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./Argan Oil.html">Argan oil</a>
+                    </li>
+                    <li>
+                        <a href="./Olive Oil.html">Olive oil</a>
+                    </li>
+                    <li>
+                        <a href="./Our Farm.html">Our farm</a>
+                    </li>
+                    <li>
+                        <a href="./Shop.html">Shop</a>
+                    </li>
+                    <li>
+                        <a href="./Contact Us.html">Contact us</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+    <main>
+        <div class="top-page">
+            <img class="page-logo" src="./images/oive-logo-03.svg" alt="olive logo">
+        <h1 class="h1-page">Olive Oil</h1>
+        </div>
+        
+        
+
+        <article>
+            
+            <p>Olive oil comes from olives, the fruit of the olive tree. Olives are a traditional crop of the Mediterranean region. People make olive oil by pressing whole olives. People use olive oil in cooking, cosmetics, medicine, soaps, and as a fuel for traditional lamps. Olive oil originally came from the Mediterranean, but today, it is popular around the world.
+                </p>
+                <img class="img-argan" src="./images/Olives1.jpg" alt="olive branch" width="100%">
+                <p>
+                    In the diet, people preserve olives in olive oil or salted water. They eat them whole or chopped and added to pizzas and other dishes. They can use olive oil a dip for bread, for drizzling on pasta, in cooking, or as a salad dressing. Some people consume it by the spoonful for medicinal purposes.
+                </p>
+                <img src="./images/Olives2.jpg" alt="olive branch" width="100%">
+                <p>
+                    Many studies have looked at the health benefits of olive oil. Extra virgin olive oil, which is the best quality oil available, is rich in antioxidants, which help prevent cellular damage caused by molecules called free radicals. Free radicals are substances that the body produces during metabolism and other processes. Antioxidants neutralize free radicals. If too many free radicals build up, they can cause oxidative stress. This can lead to cell damage, and it may play a role in the development of certain diseases, including certain types of cancer.
+                </p>
+
+        </article>
+        <hr>
+    </main>
+    <aside></aside>
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/DeLeenanatural/?ref=page_internal"><img src="./images/facebookButton.svg"
+                alt="facebook button" width="10%"></a>
+            <a href="#"><img src="./images/instagramButton.svg" alt="Instagram button" width="10%"></a>
+            <a href="#"><img src="./images/pinterestButton.svg" alt="Pinterest button" width="10%"></a>
+        </div>
+       
+       
+        <a href="#" class="footer">Terms and conditions</a>
+        <a href="#" class="footer">Privacy policy</a>
+        <a href="mailto:contactdeleena@gmail.com" class="footer">contactdeleena@gmail.com</a>
+       
+        <img class="footer-logo" src="./images/logo-01.svg" alt="logo DeLeena">
+
+       <h4> © 2019 DeLeena. All Rights Reserved.</h4>
+    </footer>
+
+
+    <script>
+        $('.nav-trigger').on('click', function () {
+            $('nav').slideToggle();
+        });
+    </script>
+    <script src=" ./js/lightbox.min.js">
+    </script>
+</div>
 </body>
 
 </html>

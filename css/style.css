@@ -1,95 +1,431 @@
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Nanum+Gothic:wght@400;700;800&display=swap");
 
-html, body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Nanum Gothic', sans-serif;
+html,
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    background-color: rgb(22, 3, 39);
-    color:wheat;
+.wrapper {
+  background-color: rgb(22, 3, 39);
+  color: wheat;
 }
-h1, h2, h3, h4{
-    margin-top: 0;
-    font-weight: normal;
+body {
+  background-color: #160327;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='88' viewBox='0 0 80 88' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 21.91V26h-2c-9.94 0-18 8.06-18 18 0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73 3.212-6.99 9.983-12.008 18-12.73V62h2c9.94 0 18-8.06 18-18 0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73-3.212 6.99-9.983 12.008-18 12.73zM54 58v4.696c-5.574 1.316-10.455 4.428-14 8.69-3.545-4.262-8.426-7.374-14-8.69V58h-5.993C12.27 58 6 51.734 6 44c0-7.732 6.275-14 14.007-14H26v-4.696c5.574-1.316 10.455-4.428 14-8.69 3.545 4.262 8.426 7.374 14 8.69V30h5.993C67.73 30 74 36.266 74 44c0 7.732-6.275 14-14.007 14H54zM42 88c0-9.94 8.06-18 18-18h2v-4.09c8.016-.722 14.787-5.738 18-12.73v7.434c-3.545 4.262-8.426 7.374-14 8.69V74h-5.993C52.275 74 46 80.268 46 88h-4zm-4 0c0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73v7.434c3.545 4.262 8.426 7.374 14 8.69V74h5.993C27.73 74 34 80.266 34 88h4zm4-88c0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73v-7.434c-3.545-4.262-8.426-7.374-14-8.69V14h-5.993C52.27 14 46 7.734 46 0h-4zM0 34.82c3.213-6.992 9.984-12.008 18-12.73V18h2c9.94 0 18-8.06 18-18h-4c0 7.732-6.275 14-14.007 14H14v4.696c-5.574 1.316-10.455 4.428-14 8.69v7.433z' fill='%23f3ec72' fill-opacity='0.17' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
-.nav-trigger{
-   
-    float: right;
-    margin-right: 10%;
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  font-weight: normal;
 }
-header{
-    background: linear-gradient(to right,#c99a4f,#f3de79,#f6f2c1,#e1c168);
-    padding: 5px;
+.nav-trigger {
+  float: right;
+  margin-right: 5%;
+  margin-top: -2%;
+  background: none;
+  border: none;
+  width: 50px;
+}
+header {
+  background: linear-gradient(to right, #c99a4f, #f3de79, #f6f2c1, #e1c168);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#sign-in,
+#sign-up {
+  text-decoration: none;
+  color: rgb(22, 3, 39);
+  font-weight: bolder;
+  padding: 5px;
+
+  font-size: 0.7em;
+}
+#sign-in {
+  margin-left: auto;
+}
+nav {
+  display: none;
+  float: right;
+  text-decoration: none;
+  position: relative;
+}
+nav ul {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  width: 200px; /* or whatever */
+  background: rgba(245, 228, 240, 0.829); /* or whatever */
+}
+nav ul li {
+  list-style: none;
+  padding: 15px 0px 15px 5px;
+  text-transform: uppercase;
+}
+nav ul li a {
+  color: rgb(71, 15, 88);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+nav ul li a:visited {
+  color: rgb(100, 17, 49);
+}
+h1 {
+  font-family: "Alex Brush", cursive;
+  color: rgb(202, 202, 202);
+  font-size: 2.5em;
+  text-align: center;
+}
+h3 {
+  font-size: 1.5em;
+  color: rgb(202, 202, 202);
+  text-align: center;
+}
+.argan {
+  font-weight: bold;
+}
+p {
+  margin: 5%;
+  border: #e1c168 solid 1.5px;
+  padding: 5%;
+  text-align: center;
+}
+img {
+  margin-top: 1em;
+}
+.button-container {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.button-container button {
+  background-image: linear-gradient(
+    to right,
+    #c99a4f,
+    #f3de79,
+    #f6f2c1,
+    #e1c168
+  );
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 0.05em;
+  color: #1d071b;
+  border-radius: 7px;
+  border-bottom: 2px solid gray;
+  border-right: 2px solid gray;
+  margin-bottom: 20px;
+  padding: 3px 5px;
+}
+a {
+  text-decoration: none;
+}
+p a {
+  color: wheat;
+}
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin: 2em auto;
+  max-width: 300px;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -2em;
+  display: block;
+}
+.our-products {
+  width: 95%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+blockquote {
+  border-radius: 5px 50px;
+  background-color: rgba(245, 222, 179, 0.13);
+  max-width: 400px;
+  border-style: outset;
+}
+blockquote p {
+  border-style: none;
+}
+blockquote p::first-letter {
+  font-weight: bold;
+  color: rgb(240, 177, 84);
+  font-family: "Alex Brush", cursive;
+  font-size: 2em;
+  margin-right: 0.1em;
+}
+blockquote hr {
+  color: wheat;
+  width: 80%;
+}
+.footer {
+  display: block;
+  color: antiquewhite;
+  margin: 5px;
+
+  text-decoration: none;
+}
+.footer:visited {
+  color: darkgrey;
+}
+.footer:hover {
+  font-style: italic;
+  color: tomato;
+}
+footer {
+  margin-top: 3em;
+  margin-left: 1em;
+  font-family: "Copperplate Gothic Light", "Times New Roman", Times, serif;
+  padding-bottom: 5%;
+}
+.footer-logo {
+  width: 50%;
+  margin: 0;
+}
+/*============================================================
+css for Argan/Olive oil page
+==============================================================*/
+
+.page-logo {
+  width: 30%;
+}
+.top-page {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.h1-page {
+  margin-top: 1em;
+}
+
+/*======================================================================
+css for Contact us page
+========================================================================*/
+
+.contact-form-wrapper {
+  width: 100%;
+  max-width: 640px;
+  margin: 25px auto 0;
+  padding: 0 20px;
+}
+.form {
+  width: 100%;
+  margin: 25px auto;
+}
+
+.top-form,
+.middle-form,
+.bottom-form {
+  width: 100%;
+  min-height: 65px;
+  margin: 10px 0;
+}
+.form input[type="text"],
+.form textarea {
+  padding: 15px 5px;
+  box-sizing: border-box;
+  width: 100%;
+  border: 2px solid wheat;
+  border-radius: 2px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+.form input:focus,
+.form textarea:focus {
+  border-color: rgb(235, 169, 46);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1),
+    0 0 8px rgba(131, 89, 172, 0.664);
+}
+
+.form .lable {
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.top-form .inner-form {
+  width: 100%;
+  margin: 5% 0;
+}
+.top-form .inner-form:last-child {
+  margin-right: 0;
+}
+.middle-form {
+  clear: both;
+}
+.bottom-form textarea {
+  height: 120px;
+}
+.btn {
+  background-image: linear-gradient(
+    to right,
+    #c99a4f,
+    #f3de79,
+    #f6f2c1,
+    #e1c168
+  );
+  width: 100px;
+  padding: 5px 0;
+  border-radius: 5px;
+  text-align: center;
+  color: rgb(39, 5, 39);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  margin-bottom: 3em;
+}
+::-webkit-input-placeholder {
+  font-family: "Nanum Gothic", sans-serif;
+  text-transform: capitalize;
+}
+::-moz-input-placeholder {
+  font-family: "Nanum Gothic", sans-serif;
+  text-transform: capitalize;
+}
+::-ms-input-placeholder {
+  font-family: "Nanum Gothic", sans-serif;
+  text-transform: capitalize;
+}
+
+@media (min-width: 740px) {
+  .wrapper {
+    width: 80%;
+    max-width: 860px;
+    margin: 0px auto;
+  }
+
+  header {
     display: flex;
-}
-#sign-in, #sign-up{
-    text-decoration: none;
-    color: rgb(22, 3, 39);
-    font-weight: bolder;
-    padding: 5px;
-    font-size: smaller;
-   
-    
-}
-#sign-in{
-    margin-left: auto;
-}
-nav ul{
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-trigger {
     display: none;
+  }
+  nav {
+    display: block;
+    flex-grow: 1;
+    position: static;
+  }
+
+  nav ul {
+    margin: 0;
+    width: auto;
+    background: none;
+    display: flex;
     justify-content: space-around;
-    text-decoration: none;
-}
-
-li{
-    list-style: none;
-    
-}
-h1{
-    font-family: 'Alex Brush', cursive;
-    color:rgb(202, 202, 202);
-    font-size: 2.5em;
-    text-align: center;
-
-   
-}
-p{
-    margin: 5%;
-    border: #e1c168 solid 1.5px;
-    padding: 5%;
-    text-align: center;
-}
-.button-container{
-    text-align: center;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    
-    }
-    .button-container button{
-        background-image: linear-gradient(to right,#c99a4f,#f3de79,#f6f2c1,#e1c168);
-        text-transform: uppercase;
-        
-   font-weight: bolder;
-   letter-spacing: 0.05em;
-    color:  #1d071b;
-    border-radius: 7px;
-    border-bottom: 2px solid gray;
-    border-right: 2px solid gray;
-    
-    margin-bottom: 20px;
-
-
-    }
-    a{
-        text-decoration: none;
-    }
-h2{
-    text-align: center;
-    text-transform: uppercase;
+    padding-left: 0;
+    flex-grow: 1;
+    position: static;
+  }
+  nav ul li a {
+    transition: all 500ms ease-out;
+  }
+  nav ul li a:hover {
+    letter-spacing: 0.1em;
     font-size: 1em;
-    margin-top: 2em;
+    border-top: rgb(80, 7, 80) 1px solid;
+    border-bottom: rgb(80, 7, 80) 1px solid;
+  }
+  #sign-in:hover,
+  #sign-up:hover {
+    color: rgb(133, 59, 59);
+  }
+  main {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 35%;
+    float: left;
+    margin-left: 10%;
+  }
+  .first-paragraph {
+    margin-top: 15%;
+  }
+  h1 {
+    margin-top: 10%;
+    margin-right: 10%;
+    font-size: 3em;
+  }
+  h3 {
+    margin-right: 10%;
+    font-size: 2em;
+  }
+  .our-products {
+    width: 60%;
+  }
+  aside {
+    grid-column: 1/5;
+  }
+  .comments {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  blockquote {
+    max-width: 250px;
+  }
+  blockquote p {
+    font-size: smaller;
+    padding: 0;
+  }
+  footer {
+    padding-bottom: 5%;
+    padding-left: 10%;
+  }
+  footer img {
+    width: 5%;
+  }
+  .footer-logo {
+    width: 25%;
+    float: right;
+    margin-top: -20%;
+    margin-right: 15%;
+  }
+
+  /*============================================================
+css for Argan/Olive oil page @media
+==============================================================*/
+  .top-page {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  /*======================================================================
+css for Contact us page @ media
+========================================================================*/
+
+  .contact-form-wrapper {
+    margin: 10px auto 0;
+  }
+
+  .top-form .inner-form {
+    width: 29.9%;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: inherit;
+  }
+  .top-form .inner-form:last-child {
+    margin-right: 0;
+  }
 }
