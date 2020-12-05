@@ -300,6 +300,122 @@ css for Contact us page
   text-transform: capitalize;
 }
 
+/*======================================================================
+css for Sign In page
+========================================================================*/
+
+.signin,
+.signup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(22, 3, 39);
+  border: 2px solid rgb(92, 60, 12);
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  border-radius: 10px;
+  padding: 0 50px;
+}
+.signin h1,
+.signup h1 {
+  margin: 20px auto;
+  border-bottom: 1px solid silver;
+}
+.signin form,
+.signup form {
+  padding: 0 40px;
+}
+form .txt-field {
+  position: relative;
+  border-bottom: 2px solid rgb(87, 83, 83);
+  margin: 30px 0;
+}
+.txt-field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  color: wheat;
+}
+.txt-field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: rgb(87, 83, 83);
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.txt-field span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #bd921c73;
+  transition: 00.5s;
+}
+.txt-field input:focus ~ label,
+.txt-field input:valid ~ label {
+  top: -5px;
+  color: #bd921c73;
+}
+.txt-field input:focus ~ span::before,
+.txt-field input:valid ~ span::before {
+  width: 100%;
+}
+.forgot-pass {
+  margin: -5px 0 20px 5px;
+  color: rgb(87, 83, 83);
+  cursor: pointer;
+}
+.forgot-pass:hover {
+  text-decoration: underline;
+}
+input[type="submit"] {
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    #c99a4f,
+    #f3de79,
+    #f6f2c1,
+    #e1c168
+  );
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 0.05em;
+  color: #1d071b;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 3px 5px;
+  transition: all 0.5s ease-in;
+}
+input[type="submit"]:hover {
+  border-bottom: 2px solid gray;
+  border-right: 2px solid gray;
+  letter-spacing: 0.2em;
+}
+.signup-link {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: rgb(87, 83, 83);
+}
+.signup-link a {
+  color: rgb(212, 211, 194);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
 @media (min-width: 740px) {
   .wrapper {
     width: 80%;
