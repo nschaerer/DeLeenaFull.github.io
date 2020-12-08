@@ -301,7 +301,7 @@ css for Contact us page
 }
 
 /*======================================================================
-css for Sign In page
+css for Sign In/Sign Up page
 ========================================================================*/
 
 .signin,
@@ -414,6 +414,82 @@ input[type="submit"]:hover {
 }
 .signup-link a:hover {
   text-decoration: underline;
+}
+
+/*======================================================================
+css for search
+========================================================================*/
+
+.search-box {
+  border: 1px solid wheat;
+  border-radius: 20px;
+  background: rgba(245, 222, 179, 0.349);
+  width: max-content;
+  display: inline-block;
+  margin: 8px;
+  margin-left: 40%;
+  /*position: absolute;
+  top: 10%;
+  right: 20%;*/
+}
+.search-box:hover {
+  box-shadow: 0 0 10px 2px rgb(87, 43, 87);
+  border: 1px solid rgba(56, 33, 56, 0.637);
+}
+.search-input {
+  width: 150px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+  margin: 10px 0 5px 5px;
+  padding: 0 5%;
+}
+i {
+  font-size: 20px;
+  margin: 0 10px 0 0;
+}
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/*======================================================================
+css for shop
+========================================================================*/
+
+.shop-products {
+  margin: 10% auto;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.product-card {
+  width: 200px;
+  height: 400px;
+  margin: 20px;
+  border: 1px solid wheat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-info {
+  margin: 15% auto;
+  max-width: 80%;
+  padding-top: 10%;
+}
+.product-info a {
+  color: wheat;
+}
+.product-image {
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+  align-self: center;
 }
 
 @media (min-width: 740px) {
@@ -543,5 +619,14 @@ css for Contact us page @ media
   }
   .top-form .inner-form:last-child {
     margin-right: 0;
+  }
+  /*======================================================================
+css for search button @ media
+========================================================================*/
+
+  .search-box {
+    position: absolute;
+    top: 10%;
+    right: 20%;
   }
 }
