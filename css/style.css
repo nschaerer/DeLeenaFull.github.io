@@ -216,11 +216,10 @@ css for Argan/Olive oil page
   margin-top: 1em;
 }
 .argan-youtube {
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 10%;
-  width: 20%;
-  height: 20%;
+  margin: 2em auto 2em auto;
+  display: block;
+  width: 60%;
+  height: 60%;
 }
 /*======================================================================
 css for Contact us page
@@ -435,8 +434,9 @@ css for search
   background: rgba(245, 222, 179, 0.349);
   width: max-content;
   display: inline-block;
-  margin: 8px;
+  margin: 5%;
   margin-left: 40%;
+
   /*position: absolute;
   top: 10%;
   right: 20%;*/
@@ -470,6 +470,7 @@ css for shop
 
 .shop-products {
   margin: 10% auto;
+
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -478,18 +479,25 @@ css for shop
 }
 .product-card {
   width: 200px;
-  height: 400px;
+
   margin: 20px;
   border: 1px solid wheat;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+.product-card:hover {
+  box-shadow: 0 0 10px 2px rgb(87, 43, 87);
+  border: 1px solid rgba(56, 33, 56, 0.637);
+}
+.product-card h6 {
+  margin: 10px auto;
+}
 .product-info {
   margin: 15% auto;
   max-width: 80%;
   padding-top: 10%;
+  margin-bottom: auto;
 }
 .product-info a {
   color: wheat;
@@ -501,9 +509,56 @@ css for shop
   align-self: center;
 }
 
+/*======================================================================
+css for shop products
+========================================================================*/
+
+.product-page h1 {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+.product-page h2 {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+.product-page img {
+  width: 50%;
+  display: block;
+  margin: 1em auto;
+  align-self: center;
+}
+.product-page .item-select {
+  text-align: center;
+  margin-top: 1em;
+}
+.continue-shopping a {
+  text-decoration: none;
+  color: wheat;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+.product-page p {
+  border: none;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+.product-description ul {
+  list-style: none;
+  margin-bottom: 2em;
+}
+.product-description {
+  margin-top: 10%;
+}
+.oil-honey {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 0.5em;
+}
+
 /*===========================================================================================================================================================================================================================@media========================================================================================================================================================================================================*/
 
-@media (min-width: 740px) {
+@media (min-width: 660px) {
   .wrapper,
   .wrapper-sign-form {
     width: 80%;
@@ -569,13 +624,14 @@ css for shop
   .logo {
     width: 35%;
     float: left;
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-top: -5%;
   }
   .first-paragraph {
-    margin-top: 15%;
+    margin-top: 5%;
   }
   h1 {
-    margin-top: 10%;
+    margin-top: 5%;
     margin-right: 10%;
     font-size: 3em;
   }
@@ -624,7 +680,10 @@ css for Argan/Olive oil page @media
     align-content: center;
   }
   .argan-youtube {
-    margin: 10%;
+    margin: 2em auto 2em auto;
+    display: block;
+    width: 560px;
+    height: 315px;
   }
 
   /*======================================================================
@@ -645,12 +704,60 @@ css for Contact us page @ media
     margin-right: 0;
   }
   /*======================================================================
-css for search button @ media
+css for search button/shop @ media 
 ========================================================================*/
 
   .search-box {
     position: absolute;
-    top: 10%;
+    top: 2%;
     right: 20%;
+  }
+  .shop-products {
+    padding-top: 2%;
+  }
+
+  /*======================================================================
+css for products @ media 
+========================================================================*/
+  .product-page {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+  }
+  .product-page img {
+    width: 70%;
+    grid-column: 1/2;
+    margin-top: -30%;
+  }
+  .product-description {
+    grid-column: 1/3;
+    align-self: start;
+  }
+
+  .product-spec,
+  .product-page h1 {
+    grid-column: 2/3;
+  }
+  .product-spec h1 {
+    font-size: 2em;
+    width: auto;
+  }
+  .product-description h2 {
+    text-align: left;
+    margin-left: 10%;
+    margin-bottom: 0;
+  }
+  .product-description ul {
+    margin-left: 5%;
+  }
+  .product-page .button-container {
+    margin-top: 10%;
+  }
+
+  .continue-shopping a:hover {
+    color: rgb(209, 158, 62);
+  }
+  .product-description {
+    margin-top: 0;
   }
 }
