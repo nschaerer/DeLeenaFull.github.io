@@ -94,6 +94,12 @@ h3 {
   color: rgb(202, 202, 202);
   text-align: center;
 }
+h4 {
+  font-family: "Nanum Gothic", sans-serif;
+  color: rgb(202, 202, 202);
+  font-size: 1em;
+  text-align: center;
+}
 .argan {
   font-weight: bold;
 }
@@ -521,6 +527,9 @@ css for shop products
   margin-top: 1em;
   margin-bottom: 0;
 }
+.product-page h4 {
+  margin-bottom: 2em;
+}
 .product-page img {
   width: 50%;
   display: block;
@@ -543,17 +552,35 @@ css for shop products
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 .product-description ul {
   list-style: none;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  list-style-type: disc;
 }
 .product-description {
   margin-top: 10%;
 }
-.oil-honey {
-  font-family: "Nanum Gothic", sans-serif;
-  font-size: 0.5em;
+
+/*======================================================================
+css for shop Our farm
+========================================================================*/
+.farm-p {
+  border: none;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 2em;
+  margin-top: 10px;
+}
+.farm-img {
+  width: 50%;
+  display: block;
+  margin: 15px auto;
+}
+.video-farm {
+  display: block;
+  margin: 2em auto;
 }
 
 /*===========================================================================================================================================================================================================================@media========================================================================================================================================================================================================*/
@@ -727,7 +754,7 @@ css for products @ media
   .product-page img {
     width: 70%;
     grid-column: 1/2;
-    margin-top: -30%;
+    margin-top: -20%;
   }
   .product-description {
     grid-column: 1/3;
@@ -735,12 +762,12 @@ css for products @ media
   }
 
   .product-spec,
-  .product-page h1 {
+  .product-page h1,
+  .product-page h4 {
     grid-column: 2/3;
   }
-  .product-spec h1 {
-    font-size: 2em;
-    width: auto;
+  .product-page h1 {
+    font-size: 2.5em;
   }
   .product-description h2 {
     text-align: left;
@@ -759,5 +786,14 @@ css for products @ media
   }
   .product-description {
     margin-top: 0;
+  }
+  .farm-img {
+    float: left;
+    margin: 15px;
+    width: 20%;
+    margin-right: 3em;
+  }
+  .farm-p {
+    text-align: left;
   }
 }
